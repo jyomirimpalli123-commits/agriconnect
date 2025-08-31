@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Scaling as Seedling, TrendingUp, Calendar, Camera, Satellite, Cloud, Phone, ArrowRight } from 'lucide-react';
+import { Users, Scaling as Seedling, TrendingUp, Calendar, Camera, Satellite, Cloud, Phone, ArrowRight, Beaker, BarChart3, MessageSquare } from 'lucide-react';
 import { i18n } from '../utils/i18n';
 
 export const HomePage: React.FC = () => {
@@ -18,6 +18,18 @@ export const HomePage: React.FC = () => {
       description: 'Upload an image of your crop to analyze its health and detect diseases using AI technology.' 
     },
     { 
+      id: 'soil', 
+      icon: Beaker, 
+      key: 'soilAnalysis', 
+      description: 'Monitor your soil health with comprehensive analysis and get personalized recommendations for soil improvement.' 
+    },
+    { 
+      id: 'yield', 
+      icon: BarChart3, 
+      key: 'yieldPrediction', 
+      description: 'Get AI-powered yield predictions based on weather, soil conditions, and crop data to optimize your harvest planning.' 
+    },
+    { 
       id: 'nasa', 
       icon: Satellite, 
       key: 'nasaData', 
@@ -34,6 +46,12 @@ export const HomePage: React.FC = () => {
       icon: Phone, 
       key: 'expertAdvice', 
       description: 'Connect with agricultural experts from Krishi Vigyan Kendras and get personalized advice for your farming needs.' 
+    },
+    { 
+      id: 'forum', 
+      icon: MessageSquare, 
+      key: 'communityForum', 
+      description: 'Connect with fellow farmers, share experiences, ask questions, and learn from the farming community.' 
     }
   ];
 
@@ -60,7 +78,7 @@ export const HomePage: React.FC = () => {
         Featured Services
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map(({ id, icon: Icon, key, description }) => (
           <div key={id} className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">

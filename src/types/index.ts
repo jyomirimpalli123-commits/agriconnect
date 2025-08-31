@@ -48,3 +48,56 @@ export interface NotificationState {
   message: string;
   type: 'info' | 'success' | 'error';
 }
+
+export interface User {
+  name: string;
+  username: string;
+  password: string;
+  phone?: string;
+  location?: string;
+  joinDate: string;
+}
+
+export interface SoilTest {
+  id: number;
+  pH: string;
+  nitrogen: string;
+  phosphorus: string;
+  potassium: string;
+  date: string;
+}
+
+export interface ForumPost {
+  id: number;
+  author: string;
+  time: string;
+  content: string;
+  likes: number;
+  comments: number;
+}
+
+export interface Expert {
+  name: string;
+  specialty: string;
+  rating: number;
+  experience: string;
+  price: string;
+}
+
+export interface GovernmentScheme {
+  title: string;
+  description: string;
+  link: string;
+}
+
+export interface YieldPrediction {
+  factors: {
+    temperature: number;
+    rainfall: number;
+    humidity: number;
+    soilMoisture: number;
+  };
+  overallScore: number;
+  estimatedYield: string;
+  confidence: string;
+}
