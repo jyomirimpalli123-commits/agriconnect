@@ -65,6 +65,21 @@ export const useVoiceAssistant = (): VoiceAssistantHook => {
           notificationManager.show('Navigating to expert advice', 'success');
           commandProcessed = true;
           break;
+        } else if (lowerCommand.includes('soil') || lowerCommand.includes('health') || lowerCommand.includes('test')) {
+          window.location.hash = '#soil';
+          notificationManager.show('Navigating to soil health', 'success');
+          commandProcessed = true;
+          break;
+        } else if (lowerCommand.includes('forum') || lowerCommand.includes('community') || lowerCommand.includes('discuss')) {
+          window.location.hash = '#forum';
+          notificationManager.show('Navigating to community forum', 'success');
+          commandProcessed = true;
+          break;
+        } else if (lowerCommand.includes('yield') || lowerCommand.includes('prediction') || lowerCommand.includes('harvest')) {
+          window.location.hash = '#yield';
+          notificationManager.show('Navigating to yield prediction', 'success');
+          commandProcessed = true;
+          break;
         }
       } else if (currentLanguage === 'te') {
         if (lowerCommand.includes('హోమ్') || lowerCommand.includes('ముఖ్య') || lowerCommand.includes('గృహ')) {
